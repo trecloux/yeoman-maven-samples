@@ -44,7 +44,9 @@ module.exports = function (grunt) {
         tasks: ['livereload']
       }
     },
+    // Modify the connect task configuration : add proxies section and insert 'proxySnippet' in the middleware
     connect: {
+      // Proxy requests starting with /webresources to the server on port 8080
       proxies: [
         {
           context: '/rest',
