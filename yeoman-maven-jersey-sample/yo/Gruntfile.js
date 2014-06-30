@@ -175,11 +175,11 @@ module.exports = function (grunt) {
         options: {
           paths: [
             '<%= yeoman.app %>/styles',
-            '<%= yeoman.app %>/components/bootstrap/less',
+            '<%= yeoman.app %>/bower_components/bootstrap/less'
           ]
         },
         files: {
-          '.tmp/styles/main.css': '<%= yeoman.app %>/styles/main.less'
+          '<%= yeoman.dist %>/styles/main.css': '<%= yeoman.app %>/styles/main.less'
         }
       }
     },
@@ -309,6 +309,7 @@ module.exports = function (grunt) {
       ],
       dist: [
         'coffee',
+        'less',
         'copy:styles',
         'imagemin',
         'svgmin',
